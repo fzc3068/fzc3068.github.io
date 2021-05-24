@@ -217,20 +217,7 @@
 			留言板
 		</a>
           
-        </li>
-        
-        <li class="m-nav-item">
-	  
-		<a href="/friends" class="waves-effect waves-light">
-			
-			    <i class="fa-fw fas fa-address-book"></i>
-			
-			友情链接
-		</a>
-          
-        </li>
-        
-        
+        </li>    
         <li><div class="divider"></div></li>
         <li>
             <a href="https://github.com" class="waves-effect waves-light" target="_blank">
@@ -371,9 +358,7 @@
                     var typed = new Typed("#subtitle", {
                         strings: [ 
                             
-                                "从来没有真正的绝境, 只有心灵的迷途，嘿嘿",
-                            
-                                "Never really desperate, only the lost of the soul",
+                                "从来没有真正的绝境, 只有心灵的迷途",
                             
                         ],
                         startDelay: 300,
@@ -522,7 +507,7 @@
                         <div class="dream">
     
     <div class="title center-align">
-        <i class="far fa-lightbulb"></i>&nbsp;&nbsp;我的
+        <i class="far fa-lightbulb"></i>&nbsp;&nbsp;理想
     </div>
     
     <div class="row">
@@ -555,7 +540,7 @@
                             
                             <img src="/medias/featureimages/24.jpg" class="responsive-img" alt="Hello World">
                             
-                            <span class="card-title">Hello World</span>
+                            <span class="card-title">java中的哈希表——HashMap</span>
                         </div>
                     </a>
 
@@ -576,13 +561,11 @@
                             </span>
                         </div>
                     </div>
-
-                    
                 </div>
             </div>
             
               <!-- 隐藏某个文章 -->
-                <div class="article col s12 m6 l4" data-aos="zoom-in">
+            <div class="article col s12 m6 l4" data-aos="zoom-in">
                 <div class="card">
                     <a href="/2021/05/17/hello-world/">
                         <div class="card-image">
@@ -590,14 +573,49 @@
                             
                             <img src="/medias/featureimages/25.jpg" class="responsive-img" alt="Hello World">
                             
-                            <span class="card-title">情绪的尽头，是沉默。</span>
+                            <span class="card-title">react-file-viewer预览本地文件</span>
                         </div>
                     </a>
 
                     <div class="card-content article-content">
                         <div class="summary block-with-text">
-                            生活本不苦，苦的是欲望过多；心本无累，累的是放不下的太多。
-                            人生就是欲望和所求的不断减少的过程；命运的深层次意义，就是要学会放弃和回归，放弃一切浮躁喧嚣，回归内心的安宁。人生，学会沉淀，而不不是消沉。
+                            import React, {Component} from 'react';
+{                           import FileViewer from 'react-file-viewer';
+
+                            export default class MyComponent extends Component {
+                                state = {
+                                    fileLocalUrl: null,
+                                    type: ''
+                                }
+                                changeFile(e) {
+                                    let file = e.currentTarget.files[0]
+                                    let fileName = file.name
+                                    console.log(file)
+                                    window.URL = window.URL || window.webkitURL;
+                                    this.setState({
+                                        fileLocalUrl: window.URL.createObjectURL(file),
+                                        type: fileName.substring(fileName.lastIndexOf(".") + 1, fileName.length)
+                                    })
+                                }
+
+                                render() {
+                                    const {fileLocalUrl, type} = this.state
+                                    return (
+                                        <!-- <div>
+                                            {
+                                                fileLocalUrl && <FileViewer
+                                                    fileType={type}
+                                                    filePath={fileLocalUrl}
+                                                    errorComponent={<div>错误</div>}
+                                                    onError={this.onError}/>
+                                            }
+                                            <input type="file" onChange={e => this.changeFile(e)}/>
+                                        </div> -->
+
+                                    );
+                                }
+
+                            }}
                         </div>
                         <div class="publish-info">
                             <span class="publish-date">
@@ -611,10 +629,42 @@
                         </div>
                     </div>
 
-                  
                 </div>
             </div>
               <!-- 2 -->
+              <div class="article col s12 m6 l4" data-aos="zoom-in">
+                <div class="card">
+                    <a href="/2021/05/17/hello-world/">
+                        <div class="card-image">
+                            
+                            
+                            <img src="/medias/featureimages/27.jpg" class="responsive-img" alt="Hello World">
+                            
+                            <span class="card-title">js数据处理-复杂树构建</span>
+                        </div>
+                    </a>
+
+                    <div class="card-content article-content">
+                        <div class="summary block-with-text">
+                            规则
+                            subject_no以小数点为段，每一段数字进行匹配，如：x包含x.y,x.z
+                            未能精确匹配的, x包含x.y.z,x.n.m
+                            未能精确匹配的, x.y包含x.y.z,x.a.b.c.d
+                        </div>
+                        <div class="publish-info">
+                            <span class="publish-date">
+                               <i class="far fa-clock fa-fw icon-date"></i>2021-03-17
+                            </span>
+                            <span class="publish-author">
+                            
+                               <i class="fas fa-user fa-fw"></i>
+                            
+                            </span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
         </div>
     </article>
 
@@ -749,8 +799,6 @@
 </footer>
 
 <div class="progress-bar"></div>
-
-
     <!-- 搜索遮罩框 -->
 <div id="searchModal" class="modal">
     <div class="modal-content">
@@ -853,11 +901,11 @@ $(function () {
 
     searchFunc('/search.xml', 'searchInput', 'searchResult');
     console.log(`
-  く__,.ヘヽ.        /  ,ー､ 〉
+   く__,.ヘヽ.        /  ,ー､ 〉
            ＼ ', !-─‐-i  /  /´
            ／｀ｰ'       L/／｀ヽ､
-         /   ／,   /|   ,   ,       ',
-       ｲ   / /-‐/  ｉ  L_ ﾊ ヽ!   i
+         /   ／,   /|   ,   ,    ',
+        ｲ   / /-‐/  ｉ  L_ ﾊ ヽ!   i
         ﾚ ﾍ 7ｲ｀ﾄ   ﾚ'ｧ-ﾄ､!ハ|   |
           !,/7 '0'     ´0iソ|    |
           |.从"    _     ,,,, / |./    |
@@ -869,8 +917,7 @@ $(function () {
               !'〈//｀Ｔ´', ＼ ｀'7'ｰr'
               ﾚ'ヽL__|___i,___,ンﾚ|ノ
                   ﾄ-,/  |___./
-                  'ｰ'    !_,.:
-`);
+                  'ｰ'    !_,.:`);
 });
 </script>
 
@@ -912,18 +959,9 @@ $(function () {
     
     
     <script async src="/libs/others/busuanzi.pure.mini.js"></script>
-    
-
-    
-
-    
+         
 
     <!--腾讯兔小巢-->
-    
-    
-
-    
-
     
 
     
