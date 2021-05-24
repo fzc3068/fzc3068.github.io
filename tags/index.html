@@ -363,7 +363,205 @@
                 <i class="fas fa-tags"></i>&nbsp;&nbsp;文章标签
             </div>
             <div class="tag-chips">
+                <!-- ====================================================== -->
+                <div id="content" class="textwrap blog-text typo js-toc-content typo-selection m-padding-lr-responsive  m-container m-padded-tb-large"><pre><code>SQL是访问和处理数据库的计算机语言，用于存取数据以及查询、更新和管理关系数据库系统
 
+                    SQL从功能上可以分为3部分：数据定义、数据操纵和数据控制
+                    
+                    这篇文章只介绍一下数据定义和数据操纵
+                    
+                    数据定义（DDL）
+                    数据定义语言是用的定义和操作数据库对象
+                    </code></pre>
+                    <h5 id="mysql修改表结构">MYSQL修改表结构</h5>
+                    <h5 id="查看表结构">查看表结构</h5>
+                    <pre><code>describe + 表名：  显示数据库表结构
+                    </code></pre>
+                    <h5 id="添加列">添加列：</h5>
+                    <pre class=" language-java"><code class=" language-java">   在表的最后追加到<span class="token operator">:</span>address：alter table students add add 添加的字段名 <span class="token keyword">char</span><span class="token punctuation">(</span><span class="token number">60</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                    </code></pre>
+                    <h5 id="修改列">修改列：</h5>
+                    <pre class=" language-java"><code class=" language-java">mysql<span class="token operator">&gt;</span> alter table friendlink change pictureaddress pictureaddress <span class="token function">varchar</span><span class="token punctuation">(</span><span class="token number">255</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                    </code></pre>
+                    <h5 id="删除列">删除列</h5>
+                    <pre class=" language-java"><code class=" language-java">基本形式：alter table 表名 drop 列名称<span class="token punctuation">;</span>
+                    </code></pre>
+                    <h5 id="重命名表">重命名表</h5>
+                    <pre class=" language-java"><code class=" language-java">基本形式alter table 表名 rename 新表名<span class="token punctuation">;</span>
+                    </code></pre>
+                    <h5 id="创建">创建</h5>
+                    <h5 id="创建数据库">创建数据库</h5>
+                    <pre class=" language-sql"><code class=" language-sql"><span class="token keyword">create</span> <span class="token keyword">database</span> 数据库名<span class="token punctuation">;</span>
+                    </code></pre>
+                    <h4 id="创建表">创建表</h4>
+                    <pre class=" language-sql"><code class=" language-sql">
+                    <span class="token keyword">create</span> <span class="token keyword">table</span> 表名{
+                    列名<span class="token number">1</span> 数据类型<span class="token number">1</span><span class="token punctuation">,</span>
+                    列名<span class="token number">2</span> 数据类型<span class="token number">2</span><span class="token punctuation">,</span>
+                    列名<span class="token number">3</span> 数据类型<span class="token number">3</span><span class="token punctuation">,</span>
+                    <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+                    列名n 数据类型n<span class="token punctuation">,</span>
+                    约束<span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+                    }<span class="token punctuation">;</span>
+                    </code></pre>
+                    <h5 id="删除">删除</h5>
+                    <h5 id="删除数据库">删除数据库</h5>
+                    <pre class=" language-sql"><code class=" language-sql">
+                    <span class="token keyword">drop</span> <span class="token keyword">database</span> 数据库名<span class="token punctuation">;</span>
+                    </code></pre>
+                    <h5 id="判断数据库是否存在存在才执行删除">判断数据库是否存在，存在才执行删除</h5>
+                    <pre class=" language-sql"><code class=" language-sql"><span class="token keyword">drop</span> <span class="token keyword">database</span> <span class="token keyword">if</span> existx 数据库名<span class="token punctuation">;</span>
+                    </code></pre>
+                    <h5 id="删除表">删除表</h5>
+                    <pre class=" language-sql"><code class=" language-sql"><span class="token keyword">drop</span> <span class="token keyword">table</span> 表名<span class="token punctuation">;</span>
+                    </code></pre>
+                    <h5 id="判断表是否存在存在才执行删除">判断表是否存在，存在才执行删除</h5>
+                    <pre class=" language-sql"><code class=" language-sql"><span class="token keyword">drop</span> <span class="token keyword">table</span> <span class="token keyword">if</span> exisex 表名<span class="token punctuation">;</span>
+                    </code></pre>
+                    <h4 id="修改">修改</h4>
+                    <h5 id="修改数据库的字符集">修改数据库的字符集</h5>
+                    <pre class=" language-sql"><code class=" language-sql"><span class="token keyword">alter</span> <span class="token keyword">database</span> 数据库名 <span class="token keyword">character set</span> 字符集名<span class="token punctuation">;</span>
+                    </code></pre>
+                    <h4 id="修改表名">修改表名</h4>
+                    <pre class=" language-sql"><code class=" language-sql">
+                    <span class="token keyword">alter</span> <span class="token keyword">table</span> 表名 <span class="token keyword">rename</span> <span class="token keyword">to</span> 新表名<span class="token punctuation">;</span>
+                    </code></pre>
+                    <h4 id="修改表的字符集">修改表的字符集</h4>
+                    <pre class=" language-sql"><code class=" language-sql"><span class="token keyword">alter</span> <span class="token keyword">table</span> 表名 <span class="token keyword">character set</span> 字符集名<span class="token punctuation">;</span>
+                    </code></pre>
+                    <h4 id="往表里补添一列">往表里补添一列</h4>
+                    <pre class=" language-sql"><code class=" language-sql"><span class="token keyword">alter</span> <span class="token keyword">table</span> 表名 <span class="token keyword">add</span> 列名 数据类型<span class="token punctuation">;</span>
+                    </code></pre>
+                    <h4 id="修改列名及数据类型">修改列名及数据类型</h4>
+                    <pre class=" language-sql"><code class=" language-sql"><span class="token keyword">alter</span> <span class="token keyword">table</span> 表名 change 列名 新列名 新数据类型<span class="token punctuation">;</span>
+                    </code></pre>
+                    <h4 id="修改列名的数据类型">修改列名的数据类型</h4>
+                    <pre class=" language-sql"><code class=" language-sql"><span class="token keyword">alter</span> <span class="token keyword">table</span> 表名 <span class="token keyword">modify</span> 列名 新数据类型<span class="token punctuation">;</span>
+                    </code></pre>
+                    <h4 id="删除指定一列">删除指定一列</h4>
+                    <pre class=" language-sql"><code class=" language-sql">alert <span class="token keyword">table</span> 表名 <span class="token keyword">drop</span> 列名<span class="token punctuation">;</span>
+                    </code></pre>
+                    <h4 id="查询">查询</h4>
+                    <h4 id="查询所有数据库的名称">查询所有数据库的名称</h4>
+                    <pre class=" language-sql"><code class=" language-sql"><span class="token keyword">show</span> <span class="token keyword">databases</span><span class="token punctuation">;</span>
+                    </code></pre>
+                    <h4 id="查询指定数据库的创建语句">查询指定数据库的创建语句</h4>
+                    <pre class=" language-sql"><code class=" language-sql"><span class="token keyword">show</span> <span class="token keyword">create</span> <span class="token keyword">database</span> 数据库名<span class="token punctuation">;</span>
+                    </code></pre>
+                    <h4 id="进入已有数据库">进入已有数据库</h4>
+                    <pre class=" language-sql"><code class=" language-sql"><span class="token keyword">use</span> 数据库名<span class="token punctuation">;</span>
+                    </code></pre>
+                    <h4 id="查询指定数据库中所有表的名称">查询指定数据库中所有表的名称</h4>
+                    <pre class=" language-sql"><code class=" language-sql"><span class="token keyword">show</span> <span class="token keyword">tables</span><span class="token punctuation">;</span>
+                    </code></pre>
+                    <h4 id="查询表结构">查询表结构</h4>
+                    <h4 id="desc-表名">desc 表名;</h4>
+                    <pre><code>数据操纵（DML）
+                    数据操纵是SQL语言使用最多和最重要的部分，
+                    作用于数据库中的表里的数据，
+                    作为后端程序员主要的工作就是使用SQL将各种数据与数据库交互
+                    
+                    数据操纵主要分为四个部分，分别是增加新数据，
+                    删除废弃数据，修改旧数据和使用最多的查询各种条件的
+                    期望数据，我们将这部分简称为增删改查
+                    </code></pre>
+                    <h4 id="增insert-into">增（insert into）</h4>
+                    <h4 id="语法格式">语法格式</h4>
+                    <pre><code>语法1:这种方式按照表的列名固定顺序添加一行数据，
+                    values后面括号里的数据必须与数据库的列全部对应
+                    
+                    insert into 表名 values(值1, 值2, 值3, ...);
+                    语法2:这种方式按照表名后面括号里的数据顺序对应values后面括号里的值添加数据，
+                    可以不按表的顺序，也可以不写全所以列，未添加的列的值按默认值或空值添加
+                    </code></pre>
+                    <pre class=" language-sql"><code class=" language-sql"><span class="token keyword">insert</span> <span class="token keyword">into</span> 表名<span class="token punctuation">(</span>列名<span class="token number">1</span><span class="token punctuation">,</span> 列名<span class="token number">3</span><span class="token punctuation">,</span> 列名<span class="token number">4</span><span class="token punctuation">)</span> <span class="token keyword">values</span><span class="token punctuation">(</span>值<span class="token number">1</span><span class="token punctuation">,</span> 值<span class="token number">3</span><span class="token punctuation">,</span> 值<span class="token number">4</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                    </code></pre>
+                    <h4 id="删delete">删（delete）</h4>
+                    <h4 id="删除数据是最简单的语句了只需要指定表名和查询条件就行">删除数据是最简单的语句了，只需要指定表名和查询条件就行</h4>
+                    <h4 id="语法格式-1">语法格式</h4>
+                    <pre class=" language-sql"><code class=" language-sql"><span class="token keyword">delete</span> <span class="token keyword">from</span> 表名 <span class="token keyword">where</span> 条件<span class="token punctuation">;</span>
+                    </code></pre>
+                    <h4 id="改update">改（update）</h4>
+                    <h4 id="修改数据只需要指定自己需要修改的几个列名按条件查询出对应数据并将值设置好就可以了">修改数据只需要指定自己需要修改的几个列名，按条件查询出对应数据，并将值设置好就可以了</h4>
+                    <h4 id="语法格式-2">语法格式</h4>
+                    <pre class=" language-sql"><code class=" language-sql">
+                    <span class="token keyword">update</span> 表名 <span class="token keyword">set</span> 列名<span class="token number">1</span> <span class="token operator">=</span> 值<span class="token number">1</span><span class="token punctuation">,</span> 列名<span class="token number">2</span> <span class="token operator">=</span> 值<span class="token number">2</span><span class="token punctuation">,</span> 列名<span class="token number">5</span> <span class="token operator">=</span> 值<span class="token number">5</span><span class="token punctuation">,</span> <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span> <span class="token keyword">where</span> 条件<span class="token punctuation">;</span>
+                    </code></pre>
+                    <h4 id="查select">查（select）</h4>
+                    <h4 id="查询数据是数据操纵的重点难点主要难在判断条件上">查询数据是数据操纵的重点难点，主要难在判断条件上</h4>
+                    <pre><code>下面语句中的 * 代表查询所有列，在实际项目中我们会将星号替换成
+                    我们实际需要用到的几个列名，多条列名用英文逗号分隔，
+                    这样有助于提高查询速度
+                    </code></pre>
+                    <h4 id="基本语法">基本语法</h4>
+                    <pre class=" language-sql"><code class=" language-sql"><span class="token keyword">select</span> <span class="token operator">*</span> <span class="token keyword">from</span> 表名 <span class="token keyword">where</span> 条件<span class="token punctuation">;</span>
+                    </code></pre>
+                    <h4 id="模糊查询">模糊查询</h4>
+                    <pre><code>模糊查询用于不确定具体查询条件是什么的时候使用，用于匹配字符串，比如以某个字符开头，以某个字符结尾或是否包含某个字符
+                    
+                    和基本语法对比，模糊查询将判断符号换成了 like
+                    
+                    下面语句以 模糊格式 代替这部分语句
+                    
+                    举例
+                    
+                    以字符a开头：a%
+                    以字符a结尾：%a
+                    包含a：%a%
+                    
+                    select * from 表名 where 列名 like 模糊格式;
+                    排序查询
+                    
+                    升序
+                    
+                    select * from 表名 where 条件 order by 列名 asc;
+                    降序
+                    
+                    select * from 表名 where 条件 order by 列名 desc;
+                    条件
+                    这里单独将一下查询条件
+                    
+                    1.基本条件
+                    
+                    使用 &gt; &gt;= &lt; &lt;= = 等逻辑运算符判断
+                    
+                    比如判断年龄大于等于18岁
+                    
+                    age &gt;= 18
+                    2.范围条件
+                    
+                    语法 bentween 起点值 and 结束值
+                    
+                    比如判断分数在60到75之间
+                    
+                    score bentween 60 and 75
+                    3.单点指定
+                    
+                    语法 in(值1, 值2, 值3, ...)
+                    
+                    可以指定多个值，比如查询学号为15，35，46，47几位同学
+                    
+                    sid in(15, 35, 46, 47)
+                    聚合函数
+                    上面说到查询语句里的 * 可以替换成指定列名，其实还可以替换成SQL语言提供的内置聚合函数实现特定功能
+                    
+                    count(列名) 统计当前条件下查询出的数据的数量
+                    sum(列名) 求某一列值的总和
+                    max(列名) 求某一列的最大值
+                    min(列名) 求某一列的最小值
+                    avg(列名) 求某一列的平均值
+                    下面几个用于语句最后
+                    
+                    distinct 去冗余
+                    group by 分组
+                    having 分组筛选
+                    总结
+                    SQL用于操作数据库，是使用数据库的必备技能，上面只是介绍了适用于所有数据库的通用语法，不同数据库的个别语法有少许差异，需要我们进一步学习运用
+                    </code></pre>
+                    <h6 id="博客参考于--httpsblogcoortoparchives20073110">博客参考于：  https://blog.coor.top/archives/20073110</h6>
+                    <h6 id="作者弥枳">作者：弥枳</h6>
+                    </div>
+                    <!-- =================================================================== -->
             </div>
         </div>
     </div>
@@ -469,10 +667,6 @@
             |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
             |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
             <br>
-            
-            
-            
-                
             
             
                 <span id="busuanzi_container_site_pv">
