@@ -134,7 +134,7 @@
         <div class="logo-name">只是个无名小辈</div>
         <div class="logo-desc">
             
-            逝者如斯夫,不舍昼夜,嘿嘿
+            逝者如斯夫,不舍昼夜
             
         </div>
     </div>
@@ -210,7 +210,7 @@
         <li><div class="divider"></div></li>
         <li>
             <a href="https://github.com" class="waves-effect waves-light" target="_blank">
-                <i class="fab fa-github-square fa-fw"></i>Fork Me
+                <i class="fab fa-github-square fa-fw"></i>访问我的GitHub
             </a>
         </li>
         
@@ -395,16 +395,9 @@
 
 
 
-
-
-
-
     <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=3068265669" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 3068265669" data-position="top" data-delay="50">
         <i class="fab fa-qq"></i>
     </a>
-
-
-
 
 
 
@@ -662,7 +655,19 @@
 
 
     <footer class="page-footer bg-color">
-    
+        <div id="waifu" style="bottom: 0px;">
+            <div id="waifu-tips" class="ASTEROIDSYEAHENEMY">记得把小家加入 Adblock 白名单哦！</div>
+            <canvas id="live2d" width="800" height="800" class="ASTEROIDSYEAHENEMY"></canvas>
+            <div id="waifu-tool" class="ASTEROIDSYEAHENEMY">
+                <span class="fa fa-lg fa-comment ASTEROIDSYEAHENEMY"></span>
+                <span class="fa fa-lg fa-paper-plane ASTEROIDSYEAHENEMY"></span>
+                <span class="fa fa-lg fa-user-circle ASTEROIDSYEAHENEMY"></span>
+                <span class="fa fa-lg fa-street-view ASTEROIDSYEAHENEMY"></span>
+                <span class="fa fa-lg fa-camera-retro ASTEROIDSYEAHENEMY"></span>
+                <span class="fa fa-lg fa-info-circle ASTEROIDSYEAHENEMY"></span>
+                <span class="fa fa-lg fa-times ASTEROIDSYEAHENEMY"></span>
+            </div>
+        </div>
         <link rel="stylesheet" href="/libs/aplayer/APlayer.min.css">
 <style>
     .aplayer .aplayer-lrc p {
@@ -690,11 +695,23 @@
     .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body:hover {
         left: 0px !important;
     }
-
+    #waifu{
+        bottom: -1000px;
+        left: 0;
+        line-height: 0;
+        margin-bottom: -10px;
+        position: fixed;
+        transform: translateY(3px);
+        transition: transform .3s ease-in-out, bottom 3s ease-in-out;
+        z-index: 1;
+    }
+    #waifu{
+        left: auto !important;
+        right: 80px !important;
+    }
     
 </style>
 <div class="">
-    
     <div class="row">
         <meting-js class="col l8 offset-l2 m10 offset-m1 s12"
                    server="netease"
@@ -761,6 +778,7 @@
             </a>
 
         </div>
+
 </div>
 <style>
     .footer_left1{
