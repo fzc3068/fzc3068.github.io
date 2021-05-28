@@ -2,8 +2,8 @@
 @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro");
 @import url("https://fonts.googleapis.com/css?family=Teko:700");
 
-/* sample 的整体样式 */
-.sample {
+/* sample-qf 的整体样式 */
+.sample-qf {
   position: relative;
   color: #ffffff; /* 控制字体颜色 */
   display: inline-block;
@@ -18,15 +18,15 @@
   background-color: #fff;
 }
 
-.sample *,
-.sample *:before,
-.sample *:after {
+.sample-qf *,
+.sample-qf *:before,
+.sample-qf *:after {
   box-sizing: border-box;
   transition: all 0.45s ease;
 }
 
-.sample:before,
-.sample:after {
+.sample-qf:before,
+.sample-qf:after {
   position: absolute;
   top: 0;
   bottom: 0;
@@ -38,23 +38,23 @@
   background-color: #b84712;
 }
 
-.sample:before {
+.sample-qf:before {
   transform: skew(30deg) translateX(80%);/* 为了做这个斜角，要用 skew() 控制倾斜量 */
 }
 
-.sample:after {
+.sample-qf:after {
   transform: skew(-30deg) translateX(70%);
 }
 
 /* 调整图片大小 */
-.sample img {
+.sample-qf img {
   backface-visibility: hidden;
   max-width: 100%;
   vertical-align: top;
 }
 
 /* 调整标题大小、位置 */
-.sample figcaption {
+.sample-qf figcaption {
   position: absolute;
   top: 0px;
   bottom: 0px;
@@ -65,8 +65,8 @@
   z-index: 1;
 }
 
-.sample figcaption:before,
-.sample figcaption:after {
+.sample-qf figcaption:before,
+.sample-qf figcaption:after {
   position: absolute;
   top: 0;
   bottom: 0;
@@ -80,23 +80,23 @@
 }
 
 /* 与上面一致调整斜角 */
-.sample figcaption:before {
+.sample-qf figcaption:before {
   transform: skew(30deg) translateX(100%);
 }
 
-.sample figcaption:after {
+.sample-qf figcaption:after {
   transform: skew(-30deg) translateX(90%);
 }
 
 /* 调整具体对应的文本 */
-.sample h3,
-.sample p {
+.sample-qf h3,
+.sample-qf p {
   margin: 0;
   opacity: 0;
   letter-spacing: 1px; /* 字间距 */
 }
 
-.sample h3 {
+.sample-qf h3 {
   font-family: 'Teko', sans-serif;
   font-size: 36px;
   font-weight: 700;
@@ -104,12 +104,12 @@
   text-transform: uppercase;
 }
 
-.sample p {
+.sample-qf p {
   font-size: 0.9em;
 }
 
 /* 链接 */
-.sample a {
+.sample-qf a {
   position: absolute;
   top: 0;
   bottom: 0;
@@ -119,49 +119,34 @@
 }
 
 /* 以下部分为鼠标移动到图片时动画部分 */
-.sample:hover h3,
-.sample:hover p,
-.sample.hover h3,
-.sample.hover p {
+.sample-qf:hover h3,
+.sample-qf:hover p,
+.sample-qf.hover h3,
+.sample-qf.hover p {
   transform: translateY(0);
   opacity: 0.9;
 }
 
-.sample:hover:before,
-.sample.hover:before {
+.sample-qf:hover:before,
+.sample-qf.hover:before {
   transform: skew(30deg) translateX(30%);
   transition-delay: 0.05s;
 }
 
-.sample:hover:after,
-.sample.hover:after {
+.sample-qf:hover:after,
+.sample-qf.hover:after {
   transform: skew(-30deg) translateX(20%);
   /* transition-delay: 0.05s; */
 }
 
-.sample:hover figcaption:before,
-.sample.hover figcaption:before {
+.sample-qf:hover figcaption:before,
+.sample-qf.hover figcaption:before {
   transform: skew(30deg) translateX(50%);
   transition-delay: 0.15s;
 }
 
-.sample:hover figcaption:after,
-.sample.hover figcaption:after {
+.sample-qf:hover figcaption:after,
+.sample-qf.hover figcaption:after {
   transform: skew(-30deg) translateX(40%);
   transition-delay: 0.1s;
-}
-
-/* 现在添加演示背景 */
-html {
-  height: 100%;
-}
-
-body {
-  background-color: #212121;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-flow: wrap;
-  margin: 0;
-  height: 100%;
 }
