@@ -378,46 +378,45 @@
         </div>
         
         <!--其他评论card-->
-        <div class="card2">
-           
-                <figure class="sample">
-                    <img src="https://freenaturestock.com/wp-content/uploads/freenaturestock-1788-768x512.jpg" alt="sample1" />
-                    <figcaption>
-                      <h3>王维</h3>
-                      <!-- 随机文本，Lorem -->
-                      <p>空山不见人,但闻人语响</p>
-                    </figcaption>
-                    <a href="#"></a>
-                  </figure>
-                
-                  <figure class="sample hover">
-                    <img src="https://freenaturestock.com/wp-content/uploads/freenaturestock-1780-768x512.jpg" alt="sample2" />
-                    <figcaption>
-                      <h3>晏殊</h3>
-                      <p>池上碧苔三四点，叶底黄鹏一两声</p>
-                    </figcaption>
-                    <a href="#"></a>
-                  </figure>
-                
-                  <figure class="sample">
-                    <img src="https://freenaturestock.com/wp-content/uploads/freenaturestock-1730-768x512.jpg" alt="sample3" />
-                    <figcaption>
-                      <h3>陶渊明</h3>
-                      <p>种豆南山下,草盛豆苗稀。</p>
-                    </figcaption>
-                    <a href="#"></a>
-                  </figure>
-                  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> -->
-                  <!-- <script>
-                        $(".hover").mouseleave(
-                            function () {
-                                $(this).removeClass("hover");
-                            }
-                        );
-                </script> -->
-
-        </div>
     </div>
+    <div class="card2">
+        <figure class="sample">
+            <img src="https://freenaturestock.com/wp-content/uploads/freenaturestock-1788-768x512.jpg" alt="sample1" />
+            <figcaption>
+              <h3>王维</h3>
+              <!-- 随机文本，Lorem -->
+              <p>空山不见人,但闻人语响</p>
+            </figcaption>
+            <a href="#"></a>
+          </figure>
+        
+          <figure class="sample hover">
+            <img src="https://freenaturestock.com/wp-content/uploads/freenaturestock-1780-768x512.jpg" alt="sample2" />
+            <figcaption>
+              <h3>晏殊</h3>
+              <p>池上碧苔三四点，叶底黄鹏一两声</p>
+            </figcaption>
+            <a href="#"></a>
+          </figure>
+        
+          <figure class="sample">
+            <img src="https://freenaturestock.com/wp-content/uploads/freenaturestock-1730-768x512.jpg" alt="sample3" />
+            <figcaption>
+              <h3>陶渊明</h3>
+              <p>种豆南山下,草盛豆苗稀。</p>
+            </figcaption>
+            <a href="#"></a>
+            </figure>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script>
+                $(".hover").mouseleave(
+                    function () {
+                        $(this).removeClass("hover");
+                    }
+                );
+        </script>
+
+</div>
 </main>
 
 
@@ -425,11 +424,16 @@
     
         <link rel="stylesheet" href="/libs/aplayer/APlayer.min.css">
 <style>
-    
+    .card2{
+        margin: 0 auto;
+        display: flex;
+        flex-direction: row;
+    }
+    .card2 .sample{
+        justify-content: space-between;
+    }
     .aplayer .aplayer-lrc p {
-        
         display: none;
-        
         font-size: 12px;
         font-weight: 700;
         line-height: 16px !important;
@@ -488,13 +492,9 @@
             
             <span id="year">2019</span>
             <a href="/about" target="_blank">志成</a>
-            |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
+            |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank"></a>
             |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
             <br>
-            
-            
-            
-                
             
             
                 <span id="busuanzi_container_site_pv">
@@ -521,14 +521,9 @@
     </a>
 
 
-
     <a href="mailto:3068265669@qq.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
         <i class="fas fa-envelope-open"></i>
     </a>
-
-
-
-
 
 
 
