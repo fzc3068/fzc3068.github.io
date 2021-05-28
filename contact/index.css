@@ -426,6 +426,7 @@
   }
   
   .slider--el-heading {
+    font-size: 5rem;
     font-family: Tesla;
     text-transform: uppercase;
     color: #fff;
