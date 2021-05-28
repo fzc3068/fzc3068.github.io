@@ -240,6 +240,9 @@ mark {
     margin-bottom: 0;
 }
 
+/* .bg-color {
+    background-image: linear-gradient(to right, #a3c9df 0%, #8eabe2 100%);
+} */
 .bg-color {
     background-image: linear-gradient(to right, #a3c9df 0%, #8eabe2 100%);
 }
