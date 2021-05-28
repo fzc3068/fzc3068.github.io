@@ -25,6 +25,7 @@
     <link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
     <link rel="stylesheet" type="text/css" href="/css/matery.css">
     <link rel="stylesheet" type="text/css" href="/css/my.css">
+    <link rel="stylesheet" href="./libs/a1/a1.css">
     <script src="/libs/jquery/jquery.min.js"></script>
 
 <meta name="generator" content="Hexo 5.4.0"></head>
@@ -642,44 +643,46 @@
                 </div>
             </div>
             <!-- 3 -->
-            <!-- <div class="card">
-                <div class="kapian">
-                    <figure class="sample">
-                        <img src="https://freenaturestock.com/wp-content/uploads/freenaturestock-1788-768x512.jpg" alt="sample1" />
-                        <figcaption>
-                          <h3>王维</h3>
-                        
-                          <p>空山不见人,但闻人语响</p>
-                        </figcaption>
-                        <a href="#"></a>
-                      </figure>
+            
+        </div>
+
+        <div class="card2">
+            <div class="kapian">
+                <figure class="sample">
+                    <img src="https://freenaturestock.com/wp-content/uploads/freenaturestock-1788-768x512.jpg" alt="sample1" />
+                    <figcaption>
+                      <h3>王维</h3>
                     
-                      <figure class="sample hover">
-                        <img src="https://freenaturestock.com/wp-content/uploads/freenaturestock-1780-768x512.jpg" alt="sample2" />
-                        <figcaption>
-                          <h3>晏殊</h3>
-                          <p>池上碧苔三四点，叶底黄鹏一两声</p>
-                        </figcaption>
-                        <a href="#"></a>
-                      </figure>
-                    
-                      <figure class="sample">
-                        <img src="https://freenaturestock.com/wp-content/uploads/freenaturestock-1730-768x512.jpg" alt="sample3" />
-                        <figcaption>
-                          <h3>陶渊明</h3>
-                          <p>种豆南山下,草盛豆苗稀。</p>
-                        </figcaption>
-                        <a href="#"></a>
-                      </figure>
-                      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-                      <script>
-                            $(".hover").mouseleave(
-                                function () {
-                                    $(this).removeClass("hover");
-                                }
-                            );
-                    </script>
-                </div> -->
+                      <p>空山不见人,但闻人语响</p>
+                    </figcaption>
+                    <a href="#"></a>
+                  </figure>
+                
+                  <figure class="sample hover">
+                    <img src="https://freenaturestock.com/wp-content/uploads/freenaturestock-1780-768x512.jpg" alt="sample2" />
+                    <figcaption>
+                      <h3>晏殊</h3>
+                      <p>池上碧苔三四点，叶底黄鹏一两声</p>
+                    </figcaption>
+                    <a href="#"></a>
+                  </figure>
+                
+                  <figure class="sample">
+                    <img src="https://freenaturestock.com/wp-content/uploads/freenaturestock-1730-768x512.jpg" alt="sample3" />
+                    <figcaption>
+                      <h3>陶渊明</h3>
+                      <p>种豆南山下,草盛豆苗稀。</p>
+                    </figcaption>
+                    <a href="#"></a>
+                  </figure>
+                  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+                  <script>
+                        $(".hover").mouseleave(
+                            function () {
+                                $(this).removeClass("hover");
+                            }
+                        );
+                </script>
             </div>
         </div>
     </article>
@@ -690,7 +693,14 @@
         
         <link rel="stylesheet" href="/libs/aplayer/APlayer.min.css">
 <style>
-    
+    .kapian{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-flow: wrap;
+        margin: auto;
+        margin-top: 500px;
+    }
     .aplayer .aplayer-lrc p {
         
         display: none;
