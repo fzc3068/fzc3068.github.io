@@ -18,6 +18,7 @@
     justify-content: center;
   }
   
+  
   button,
   input {
     outline: none;
@@ -33,8 +34,9 @@
   }
   
   .slider {
+    width: 736px;
+    height: 560px;
     position: relative;
-    height: 100%;
   }
   
   .slider--control {
