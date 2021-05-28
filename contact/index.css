@@ -473,7 +473,7 @@
   }
       
   #page3:checked ~ .slider--el-3 .slider--el-bg {
-    transform: scale(0.834);
+    transform: scale(0.8);
   }
       
   #page3:checked ~ .slider--el-3 .slider--el-content {
