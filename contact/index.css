@@ -34,8 +34,8 @@
   }
   
   .slider {
-    width: 736px;
-    height: 560px;
+    width: 936px;
+    height: 730px;
     position: relative;
   }
   
@@ -98,7 +98,7 @@
     top: 0;
     width: 500%;
     height: 100%;
-    background-image: url("https://source.unsplash.com/VnUrGq7CstM");
+    background-image: url("https://freenaturestock.com/wp-content/uploads/freenaturestock-1663-768x512.jpg");
   }
   
   .slider--el.anim-5parts .part.part-1 {
@@ -170,7 +170,7 @@
     background-size: cover;
     width: 300%;
     height: 300%;
-    background-image: url("https://source.unsplash.com/zYSzB2-cNBc");
+    background-image: url("https://freenaturestock.com/wp-content/uploads/freenaturestock-1765-768x512.jpg");
   }
   
   .slider--el.anim-9parts .part.left-top {
@@ -294,7 +294,7 @@
     background-size: cover;
     width: 300%;
     height: 100%;
-    background-image: url("https://source.unsplash.com/uZFwvWVtL-c");
+    background-image: url("https://freenaturestock.com/wp-content/uploads/freenaturestock-123-768x512.jpeg");
   }
   
   .slider--el.anim-3parts .part.left {
@@ -348,7 +348,7 @@
     background-size: cover;
     width: 200%;
     height: 200%;
-    background-image: url("https://source.unsplash.com/zAjdgNXsMeg");
+    background-image: url("https://freenaturestock.com/wp-content/uploads/freenaturestock-1338-768x512.jpeg");
   }
   
   .slider--el.anim-4parts .part.top {
