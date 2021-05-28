@@ -525,7 +525,29 @@
                     <div class="card-content article-content">
                         <div class="summary block-with-text">
                             
-                            喜欢安定，也不怕漂泊。喜欢结伴，也不怕多行。
+                            import React, {Component} from 'react';
+{                           import FileViewer from 'react-file-viewer';
+                            export default class MyComponent extends Component {
+                                state = {
+                                    fileLocalUrl: null,
+                                    type: ''
+                                }
+                                changeFile(e) {
+                                    let file = e.currentTarget.files[0]
+                                    let fileName = file.name
+                                    console.log(file)
+                                    window.URL = window.URL || window.webkitURL;
+                                    this.setState({
+                                        fileLocalUrl: window.URL.createObjectURL(file),
+                                        type: fileName.substring(fileName.lastIndexOf(".") + 1, fileName.length)
+                                    })
+                                }
+
+                                render() {
+                                    const {fileLocalUrl, type} = this.state
+                                    return (
+
+                            
                             
                         </div>
                         <div class="publish-info">
@@ -557,42 +579,7 @@
 
                     <div class="card-content article-content">
                         <div class="summary block-with-text">
-                            import React, {Component} from 'react';
-{                           import FileViewer from 'react-file-viewer';
-                            export default class MyComponent extends Component {
-                                state = {
-                                    fileLocalUrl: null,
-                                    type: ''
-                                }
-                                changeFile(e) {
-                                    let file = e.currentTarget.files[0]
-                                    let fileName = file.name
-                                    console.log(file)
-                                    window.URL = window.URL || window.webkitURL;
-                                    this.setState({
-                                        fileLocalUrl: window.URL.createObjectURL(file),
-                                        type: fileName.substring(fileName.lastIndexOf(".") + 1, fileName.length)
-                                    })
-                                }
-
-                                render() {
-                                    const {fileLocalUrl, type} = this.state
-                                    return (
-                                        <!-- <div>
-                                            {
-                                                fileLocalUrl && <FileViewer
-                                                    fileType={type}
-                                                    filePath={fileLocalUrl}
-                                                    errorComponent={<div>错误</div>}
-                                                    onError={this.onError}/>
-                                            }
-                                            <input type="file" onChange={e => this.changeFile(e)}/>
-                                        </div> -->
-
-                                    );
-                                }
-
-                            }}
+                            喜欢安定，也不怕漂泊。喜欢结伴，也不怕多行。
                         </div>
                         <div class="publish-info">
                             <span class="publish-date">
