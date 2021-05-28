@@ -376,47 +376,46 @@
             <!--valine评论弹幕-->
 
         </div>
-        
+        <div class="card2">
+            <figure class="sample-qf">
+                <img src="https://freenaturestock.com/wp-content/uploads/freenaturestock-1788-768x512.jpg" alt="sample-qf1" />
+                <figcaption>
+                  <h3>王维</h3>
+                  <!-- 随机文本，Lorem -->
+                  <p>空山不见人,但闻人语响</p>
+                </figcaption>
+                <a href="#"></a>
+              </figure>
+            
+              <figure class="sample-qf hover">
+                <img src="https://freenaturestock.com/wp-content/uploads/freenaturestock-1780-768x512.jpg" alt="sample-qf2" />
+                <figcaption>
+                  <h3>晏殊</h3>
+                  <p>池上碧苔三四点，叶底黄鹏一两声</p>
+                </figcaption>
+                <a href="#"></a>
+              </figure>
+            
+              <figure class="sample-qf">
+                <img src="https://freenaturestock.com/wp-content/uploads/freenaturestock-1730-768x512.jpg" alt="sample-qf3" />
+                <figcaption>
+                  <h3>陶渊明</h3>
+                  <p>种豆南山下,草盛豆苗稀。</p>
+                </figcaption>
+                <a href="#"></a>
+                </figure>
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+            <script>
+                    $(".hover").mouseleave(
+                        function () {
+                            $(this).removeClass("hover");
+                        }
+                    );
+            </script>
+        </div>
         <!--其他评论card-->
     </div>
-    <div class="card-2">
-        <figure class="sample-qf">
-            <img src="https://freenaturestock.com/wp-content/uploads/freenaturestock-1788-768x512.jpg" alt="sample-qf1" />
-            <figcaption>
-              <h3>王维</h3>
-              <!-- 随机文本，Lorem -->
-              <p>空山不见人,但闻人语响</p>
-            </figcaption>
-            <a href="#"></a>
-          </figure>
-        
-          <figure class="sample-qf hover">
-            <img src="https://freenaturestock.com/wp-content/uploads/freenaturestock-1780-768x512.jpg" alt="sample-qf2" />
-            <figcaption>
-              <h3>晏殊</h3>
-              <p>池上碧苔三四点，叶底黄鹏一两声</p>
-            </figcaption>
-            <a href="#"></a>
-          </figure>
-        
-          <figure class="sample-qf">
-            <img src="https://freenaturestock.com/wp-content/uploads/freenaturestock-1730-768x512.jpg" alt="sample-qf3" />
-            <figcaption>
-              <h3>陶渊明</h3>
-              <p>种豆南山下,草盛豆苗稀。</p>
-            </figcaption>
-            <a href="#"></a>
-            </figure>
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-        <script>
-                $(".hover").mouseleave(
-                    function () {
-                        $(this).removeClass("hover");
-                    }
-                );
-        </script>
-
-</div>
+    
 </main>
 
 
@@ -425,12 +424,10 @@
         <link rel="stylesheet" href="/libs/aplayer/APlayer.min.css">
 <style>
     .card2{
-        margin: 0 auto;
         display: flex;
-        flex-direction: row;
-    }
-    .card2 .sample-qf{
-        justify-content: space-between;
+        justify-content: center;
+        align-items: center;
+        flex-flow: wrap;
     }
     .aplayer .aplayer-lrc p {
         display: none;
