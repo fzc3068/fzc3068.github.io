@@ -17,9 +17,9 @@ var RENDERER = {
 	// 对象的函数
 	setParameters : function(){
 		this.$window = $(window);
-		this.$container = $('#fish-container');
+		this.$container123 = $('#fish-container123');
 		this.$canvas = $('<canvas />');
-		this.context = this.$canvas.appendTo(this.$container).get(0).getContext('2d');
+		this.context = this.$canvas.appendTo(this.$container123).get(0).getContext('2d');
 		this.points = [];
 		this.fishes = [];
 		this.watchIds = [];
@@ -51,8 +51,8 @@ var RENDERER = {
 		this.fishes.length = 0;
 		this.watchIds.length = 0;
 		this.intervalCount = this.MAX_INTERVAL_COUNT;
-		this.width = this.$container.width();
-		this.height = this.$container.height();
+		this.width = this.$container123.width();
+		this.height = this.$container123.height();
 		this.fishCount = this.FISH_COUNT * this.width / 500 * this.height / 500;
 		this.$canvas.attr({width : this.width, height : this.height});
 		this.reverse = false;
@@ -85,12 +85,12 @@ var RENDERER = {
 	},
 	bindEvent : function(){
 		this.$window.on('resize', this.watchWindowSize);
-		this.$container.on('mouseenter', this.startEpicenter);
-		this.$container.on('mousemove', this.moveEpicenter);
-		this.$container.on('click', this.reverseVertical);
+		this.$container123.on('mouseenter', this.startEpicenter);
+		this.$container123.on('mousemove', this.moveEpicenter);
+		this.$container123.on('click', this.reverseVertical);
 	},
 	getAxis : function(event){
-		var offset = this.$container.offset();
+		var offset = this.$container123.offset();
 		
 		return {
 			x : event.clientX - offset.left + this.$window.scrollLeft(),
